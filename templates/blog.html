@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+	{% block content %}
+		{% for item in blog %}
+		<hr class="w-full bg-gray-300 my-12" style="height: 1px;">
+		<li class="mt-16 list-reset"> 
+			<time class="uppercase text-xs text-gray-500 font-bold"> {{item.date}} </time> 
+			<h2 class="mt-1 text-2xl tracking-tight font-extrabold text-gray-900 sm:leading-none md:text-3xl">{{item.title}}</h2>
+			<div class="mt-6 post-content"><p>{{item.body}}</p> </div>
+		</li>
+		{% endfor %}
+	
+	{% endblock %}
+		
